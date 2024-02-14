@@ -230,6 +230,36 @@ body {
     opacity: .9;
 }
 
+/* slider */
+
+.carousel-indicators{
+    bottom: -32px;
+    margin: 0;
+    justify-content: start;
+    border-bottom: 1px solid var(--white);
+}
+
+.carousel-indicators [data-bs-target]{
+    height: 6px;
+    width: auto;
+    min-width: 72px;
+    margin-right: 24px;
+    margin-left: 0;
+    text-indent: 0;
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 48px;
+    padding-right: 16px;
+    background: rgba(255,255,255,0);
+}
+
+.carousel-indicators .active{
+    font-weight: 400;
+    background: rgba(255,255,255,1);
+}
+
 /* services */
 
 .services {
@@ -350,7 +380,7 @@ input:focus-visible{
     height: 20px;
     background-repeat: no-repeat;
     background-image: url(assets/arrow.svg);
-    bottom: 4px;
+    bottom: 7px;
     right: 12px;
 } 
 
