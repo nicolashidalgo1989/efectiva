@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.7 21.7">
+  <defs> 
+    <style>
+      @import '../style.css'
+    </style>
+  </defs>
+  <g class="svg diagnostico">
+    <circle cx="10.85" cy="10.85" r="9.85" />
+    <path d="M1,10.85H4.52a1,1,0,0,0,.82-.43l.44-.62a1,1,0,0,1,1.77.26l.68,2.13a1,1,0,0,0,1.92,0l1.4-5.1a1,1,0,0,1,1.89-.12l1.33,3.29a1,1,0,0,0,.93.63h5" />
+  </g>
+</svg>

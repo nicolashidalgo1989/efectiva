@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 45" width="46" height="45">
+	<title>Objeto inteligente vectorial-ai</title>
+	<style>
+		.s0 { fill: #f37037 } 
+		.s1 { fill: none;stroke: #ffffff;stroke-linecap: round;stroke-miterlimit:10;stroke-width: 2.1 } 
+	</style>
+	<g id="Capa 1">
+		<path id="&lt;Path&gt;" class="s0" d="m45.5 22.4c0 12.4-10.1 22.5-22.5 22.5-12.4 0-22.5-10.1-22.5-22.5 0-12.4 10.1-22.5 22.5-22.5 12.4 0 22.5 10.1 22.5 22.5z"/>
+		<g id="&lt;Group&gt;">
+			<path id="&lt;Path&gt;" class="s1" d="m10.7 22.4h24.6"/>
+			<path id="&lt;Path&gt;" class="s1" d="m23 10.1v24.6"/>
+		</g>
+	</g>
+</svg>
