@@ -233,26 +233,30 @@ body {
 /* slider */
 
 .carousel-indicators{
-    bottom: -32px;
-    margin: 0;
-    justify-content: start;
     border-bottom: 1px solid var(--white);
+    bottom: -32px;
+    justify-content: start;
+    margin: 0;
 }
 
 .carousel-indicators [data-bs-target]{
-    height: 6px;
-    width: auto;
-    min-width: 72px;
-    margin-right: 24px;
-    margin-left: 0;
-    text-indent: 0;
+    background: rgba(255,255,255,0);
     border: none;
     color: white;
     font-size: 14px;
     font-weight: 200;
+    height: 6px;
     line-height: 48px;
+    min-width: 72px;
+    margin-right: 24px;
+    margin-left: 0;
     padding-right: 16px;
-    background: rgba(255,255,255,0);
+    text-indent: 0;
+    width: auto;
+}
+
+.carousel-indicators [data-bs-target]:nth-last-child(){
+    margin-right: 0;
 }
 
 .carousel-indicators .active{
