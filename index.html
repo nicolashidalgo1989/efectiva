@@ -26,7 +26,7 @@
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> </h5>
+                    <h5 class="offcanvas-title invisible" id="offcanvasNavbarLabel">Menu</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
@@ -50,7 +50,7 @@
     <div class="container mb-4 pb-4 mb-md-5 pb-md-5">
         <div class="row">
             <div class="col-11 mx-auto">
-                <div id="slider" class="carousel slide carousel-fade">
+                <div id="slider" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Contexto">Contexto</button>
                         <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Estadística">Estadística</button>
@@ -116,11 +116,14 @@
     <!-- servicios -->
     <section class="py-5 bg-black" id="servicios">
         <div class="container pt-4 px-5 px-sm-4">
-            <div class="row pt-4 services">
+            <div class="row pt-4 services d-flex flex-wrap">
                 <div class="col-12">
                     <h2 class="h2 text-orange text-md-center text-left">Servicios</h2>
                 </div>
                 <article class="col-md-6 col-lg-4 my-4 my-md-5 d-flex flex-column">
+                    <header class="invisible">
+                        <h3>Mapa de Riesgo</h3>
+                    </header>
                     <object data="assets/01mapa.svg" width="50" height="50" class="mb-4"></object>
                     <p>
                         <strong class="d-block">Mapa de Riesgo</strong>
@@ -130,6 +133,9 @@
                     </p>
                 </article>
                 <article class="col-md-6 col-lg-4 my-4 my-md-5 d-flex flex-column">
+                    <header class="invisible">
+                        <h3>Diagnóstico de Amenazas y Vulnerabilidades</h3>
+                    </header>
                     <object data="assets/02diagnostico.svg" width="50" height="50" class="mb-4"></object> 
                     <p>
                         <strong class="d-block">Diagnóstico de Amenazas y Vulnerabilidades</strong>
@@ -140,6 +146,9 @@
                     </p>
                 </article>
                 <article class="col-md-6 col-lg-4 my-4 my-md-5 d-flex flex-column">
+                    <header class="invisible">
+                        <h3>Plan de Acción</h3>
+                    </header>
                     <object data="assets/03plan.svg" width="50" height="50" class="mb-4"></object>
                     <p>
                         <strong class="d-block">Plan de Acción</strong>
@@ -150,6 +159,9 @@
                     </p>
                 </article>
                 <article class="col-md-6 col-lg-4 my-4 my-md-5 d-flex flex-column">
+                    <header class="invisible">
+                        <h3>Ejecución/Acompañamiento  Plan de Acción</h3>
+                    </header>
                     <object data="assets/04acompanamiento.svg" width="50" height="50" class="mb-4"></object>
                     <p>
                         <strong class="d-block">Ejecución/Acompañamiento  Plan de Acción</strong>
@@ -159,6 +171,9 @@
                     </p>
                 </article>
                 <article class="col-md-6 col-lg-4 my-4 my-md-5 d-flex flex-column">
+                    <header class="invisible">
+                        <h3>Asesoría Directiva en Gestión de Riesgo de Desastres</h3>
+                    </header>
                     <object data="assets/05directiva.svg" width="50" height="50" class="mb-4"></object>
                     <p>
                         <strong class="d-block">Asesoría Directiva en Gestión de Riesgo de Desastres </strong>
@@ -169,6 +184,9 @@
                     </p>
                 </article>
                 <article class="col-md-6 col-lg-4 my-4 my-md-5 d-flex flex-column">
+                    <header class="invisible">
+                        <h3>Talleres de Sensibilización</h3>
+                    </header>
                     <object data="assets/06talleres.svg" width="50" height="50" class="mb-4"></object>
                     <p>
                         <strong class="d-block">Talleres de Sensibilización</strong>
@@ -178,6 +196,9 @@
                     </p>
                 </article>
                 <article class="col-md-6 col-lg-4 my-4 my-md-5 d-flex flex-column">
+                    <header class="invisible">
+                        <h3>Simulaciones y Simulacros</h3>
+                    </header>
                     <object data="assets/07simulacros.svg" width="50" height="50" class="mb-4"></object>
                     <p>
                         <strong class="d-block">Simulaciones y Simulacros</strong>
@@ -191,7 +212,7 @@
     </section>
 
     <!-- quote -->
-    <div class="py-5 bg-02">
+    <div class="py-5 bg-landscape">
         <div class="py-5 container px-5 px-sm-4">
             <div class="row">
                 <div class="col-sm-10 col-md-8 col-lg-6 offset-lg-2"> 
@@ -209,7 +230,7 @@
                     </figure>
                 </div>
                 <div class="col-sm-2 col-md-4 col-lg-3 d-none d-sm-flex align-items-center justify-content-end"> 
-                    <img src="assets/icon-plus.svg" width="70">
+                    <img src="assets/icon-plus.svg" width="70" alt="plus">
                 </div>
             </div>
         </div>
@@ -281,25 +302,25 @@
             <form class="row" name="form" id="form">
                 <div class="col-md-6 col-lg-4 my-md-5 my-4">
                     <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" maxlength="30" placeholder="Juan" autocomplete="off">
+                    <input type="text" class="form-control" id="nombre" maxlength="30" placeholder="Juan" autocomplete="off" required>
                 </div>
                 <div class="col-md-6 col-lg-4 my-md-5 my-4">
                     <label for="apellido" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="apellido" maxlength="30" placeholder="Perez" autocomplete="off">
+                    <input type="text" class="form-control" id="apellido" maxlength="30" placeholder="Perez" autocomplete="off" required>
                 </div>
                 <div class="col-md-6 col-lg-4 my-md-5 my-4">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" maxlength="30" placeholder="juan@perez.com"  autocomplete="off">
+                    <input type="email" class="form-control" id="email" maxlength="30" placeholder="juan@perez.com" autocomplete="off" required>
                 </div>
                 <div class="col-md-6 col-lg-4 my-md-5 my-4 custom-phone">
                     <label for="telefono" class="form-label">Teléfono</label> 
-                    <input type="text" class="form-control" id="telefono" maxlength="9" autocomplete="off" >
+                    <input type="text" class="form-control" id="telefono" maxlength="9" autocomplete="off" required>
                 </div>
                 <div class="col-md-6 col-lg-4 my-md-5 my-4">
                     <div class="custom-select"> 
                         <label for="reason" class="form-label">Quiero que me contacten por...</label>
-                        <select id="reason" class="form-select">
-                            <option hidden disabled selected>Seleccionar</option>
+                        <select id="reason" class="form-select" required>
+                            <option value="" style="opacity: .3" hidden disabled selected>Seleccionar</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
