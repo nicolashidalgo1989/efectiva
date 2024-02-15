@@ -16,6 +16,7 @@
 
 body { 
     font-family: var(--roboto)!important;
+    color: var(--white);
     background-color: var(--black);
     background-image: url(assets/topografía.png); 
     background-position: center -120px;
@@ -88,6 +89,10 @@ body {
     font-style: normal;
 }
 
+.h2.extra-size{
+    font-size: 124px;
+}
+
 .h3 {
     font-size: 24px;
     font-weight: 500;
@@ -108,17 +113,7 @@ body {
 .h4{
     font-weight: 200;
     font-size: 52px;
-}
-
-.texto{
-    font-size: 24px;
-    font-weight: 300;
-}
- 
-.texto-36{
-    font-size: 32px;
-    font-weight: 300;
-}
+}  
 
 .blockquote{
     font-size: 32px;
@@ -237,14 +232,9 @@ body {
     display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
-}
+} 
 
-.service {
-    display: flex;
-    flex-direction: column;
-}
-
-.service p {
+.services article p {
     border-bottom: 1px solid white;
     flex-grow: 1;
     font-size: 17px; 
@@ -254,15 +244,11 @@ body {
     padding-bottom: 16px;
 } 
  
-.service p strong{
+.services article p strong{
     font-weight: 500;
 }
 
 /* extras */
-
-.big-text{
-    font-size: 120px;
-}
 
 .min-h-100{
     height: 100vh!important;
