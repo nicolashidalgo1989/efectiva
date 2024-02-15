@@ -58,9 +58,9 @@ body {
 /* nav */ 
 
 .navbar-nav .nav-item .nav-link{
-    font-size: 16px;
+    font-size: 14px;
     padding: 8px 32px;
-    font-weight: 100;
+    font-weight: 400;
 }
 
 .navbar-toggler:focus,
@@ -70,7 +70,7 @@ body {
 }
 
 .offcanvas{
-    background: var(--black);
+    background-color: var(--black);
     color: var(--white);
 }
 
@@ -90,6 +90,7 @@ body {
 
 .h3 {
     font-size: 24px;
+    font-weight: 500;
     padding: 16px 0;
     position: relative;
 }
@@ -97,7 +98,7 @@ body {
 .h3:before {
     content: "";
     display: block;
-    width: 36px;
+    width: 64px;
     height: 3px;
     background: white; 
     position: absolute;
@@ -107,10 +108,6 @@ body {
 .h4{
     font-weight: 200;
     font-size: 52px;
-}
-
-p strong{
-    font-weight: 400;
 }
 
 .texto{
@@ -124,25 +121,27 @@ p strong{
 }
 
 .blockquote{
-    font-size: 24px; 
-    padding: 16px 0;
+    font-size: 32px;
+    padding: 24px 0;
     position: relative;
+    line-height: 38px;
+    font-weight: 300;
 } 
 
 .blockquote:before{
     content: "";
     display: block;
-    width: 36px;
+    width: 48px;
     height: 3px;
     background: white; 
     position: absolute;
-    top: -16px; 
+    top: -24px; 
 } 
 
 .blockquote-footer cite{
     color: white;
-    font-size: 14px;
-    font-weight: 100;
+    font-size: 18px;
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -197,7 +196,7 @@ p strong{
 /* slider */
 
 .carousel-indicators{
-    border-bottom: 1px solid var(--white);
+    border-bottom: 2px solid var(--white);
     bottom: -32px;
     justify-content: start;
     margin: 0;
@@ -208,24 +207,26 @@ p strong{
     border: none;
     color: white;
     font-size: 14px;
-    font-weight: 200;
+    font-weight: 400;
     height: 6px;
     line-height: 48px;
     min-width: 72px;
     margin-right: 24px;
     margin-left: 0;
+    opacity: 1;
     padding-right: 16px;
+    text-align: left;
     text-indent: 0;
     width: auto;
+    transition: all .3s ease-in-out;
 }
 
 .carousel-indicators [data-bs-target]:nth-last-child(){
     margin-right: 0;
 }
 
-.carousel-indicators .active{
-    font-weight: 400;
-    background: rgba(255,255,255,1);
+.carousel-indicators .active{ 
+    background: rgba(255,255,255,1); 
 }
 
 /* services */
@@ -246,12 +247,16 @@ p strong{
 .service p {
     border-bottom: 1px solid white;
     flex-grow: 1;
-    font-size: 16px; 
-    font-weight: 100;
+    font-size: 17px; 
+    font-weight: 300;
     height: 100%;
     line-height: 22px;
     padding-bottom: 16px;
 } 
+ 
+.service p strong{
+    font-weight: 500;
+}
 
 /* extras */
 
@@ -305,16 +310,17 @@ p strong{
 /* form */
 
 .form-label{
-    font-size: 19px;
     color: var(--white);
+    font-size: 22px;
     font-weight: 200;
 }
 
 .form-control{
-    border-radius: 0;
     background: transparent;
     border: none;
     border-bottom: 1px solid var(--white); 
+    border-radius: 0;
+    font-size: 22px;
 }
 
 .form-control:focus {  
@@ -322,6 +328,31 @@ p strong{
     border-color: var(--white);
     box-shadow: none;
     outline: 0;
+}
+ 
+.form-control::-moz-placeholder,
+.form-select::-moz-placeholder {
+    opacity: .5;
+}
+
+.form-control:-ms-input-placeholder,
+.form-select:-ms-input-placeholder {
+    opacity: .5;
+}
+
+.form-control::-webkit-input-placeholder,
+.form-select::-webkit-input-placeholder {
+    opacity: .5;
+}
+
+.form-control::-webkit-input-placeholder,
+.form-select::-webkit-input-placeholder { 
+    opacity: .5;
+}
+
+.form-control::placeholder,
+.form-select::placeholder { 
+    opacity: .5;
 }
 
 input:-webkit-autofill:focus { 
@@ -337,48 +368,52 @@ input:focus-visible{
 }
 
 .custom-phone .form-control{
-    text-indent: 30px;
+    text-indent: 40px;
 }
 
 .custom-select::after { 
-    position: absolute;
-    content: "";
-    right: 1rem;
-    pointer-events: none;  
-    width: 20px;
-    height: 20px;
-    background-repeat: no-repeat;
     background-image: url(assets/arrow.svg);
+    background-repeat: no-repeat;
     bottom: 7px;
+    content: "";
+    height: 20px;
+    pointer-events: none;  
+    position: absolute;
     right: 12px;
+    width: 20px;
 } 
+
+.default-option {
+    opacity: .5!important;
+}
 
 .custom-phone::after { 
     background-repeat: no-repeat;
-    bottom: 11px;
+    bottom: 23px;
     color: var(--black);
     content: "+54"; 
+    font-size: 23px;
     height: 20px;
-    left: 24px;
-    opacity: .8;
+    left: 20px;
+    opacity: .3;
     pointer-events: none;
     position: absolute;
     width: 20px;
 } 
  
-.form-select{ 
-    /* color: var(--white); */
+.form-select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
     border: none;
     border-bottom: 1px solid var(--white);
     border-radius: 0px;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: none;
+    font-size: 24px;
 }
 
 select::-ms-expand {
-  display: none;
+    display: none;
 }
 
 .form-select:focus, .form-select:focus-within{
@@ -399,9 +434,8 @@ select::-ms-expand {
     background-position-y: 5px;
 }
 
-.form-control::placeholder,
-.form-control::-ms-input-placeholder {  
-    opacity: .3; 
+.form-select option:nth-child(1){
+    opacity: .5;
 }
   
 input::-webkit-outer-spin-button,
